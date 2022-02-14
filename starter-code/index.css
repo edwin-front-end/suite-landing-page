@@ -1,0 +1,352 @@
+/* CSS RESET */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Epilogue', sans-serif;
+  color: var(--color-dark-blue);
+  background-color: var(--color-cream-white);
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+:root {
+    font-size: 62.5%;
+    --color-dark-blue: rgb(23, 35, 57);
+    --color-grey: rgb(73, 86, 109);
+    --color-cream: rgb(243, 237, 231);
+    --color-cream-white: rgb(250, 248, 246);
+    --color-purple: rgb(160, 96, 255);
+    --color-violet: rgb(203, 48, 227);
+    --color-orange: rgb(255, 168, 78);
+}
+
+/* TYPOGRAPHY */
+
+h1{
+    margin-bottom: 0.5em;
+}
+
+p{
+    margin-bottom: 2.5em;
+    max-width: 35ch;
+}
+
+.heading-xl-bold {
+    font-weight: 700;
+    font-size: 7.2rem;
+    letter-spacing: -0.1rem;
+    line-height: 7.8rem;
+}
+.heading-xl-regular {
+    font-weight: 400;
+    font-size: 7.2rem;
+    letter-spacing: -0.1rem;
+    line-height: 7.8rem;
+}
+.heading-l-bold {
+    font-weight: 700;
+    font-size: 4.8rem;
+    letter-spacing: -0.05rem;
+    line-height: 5.6rem;
+}
+.heading-l-regular {
+    font-weight: 400;
+    font-size: 4.8rem;
+    letter-spacing: -0.05rem;
+    line-height: 5.6rem;
+}
+.heading-m-bold {
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: -0.1rem;
+    line-height: 3.2rem; 
+}
+.heading-s-bold {
+    font-weight: 400;
+    font-size: 1.6rem;
+    letter-spacing: -0.25rem;
+    line-height: 2.6rem; 
+}
+.quote-regular {
+    font-weight: 400;
+    font-size: 2.0rem;
+    letter-spacing: 0rem;
+    line-height: 3.5rem; 
+}
+.body-regular {
+    font-weight: 400;
+    font-size: 1.8rem;
+    letter-spacing: 0rem;
+    line-height: 3.2rem; 
+}
+.footer-regular {
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0rem;
+    line-height: 3.2rem; 
+}
+/* BUTTON */
+
+.cta{
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 0.2rem solid;
+    border-color: var(--color-dark-blue);
+    padding: 0.6em 1.4em;
+    align-self: flex-start;
+}
+.cta-primary {
+    background-color: var(--color-dark-blue);
+    color: var(--color-cream-white);
+}
+.cta-secondary {
+    background-color: var(--color-cream);
+    color: var(--color-dark-blue);  
+}
+/* LAYOUT & CONTAINER */
+
+.container {
+    max-width: 50vw;
+    margin: 0 auto;
+    padding: 8em 0;
+    display: flex;
+}
+
+nav {
+    justify-content: space-between;
+}
+
+/* HERO SECTION */
+
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+}
+
+.hero-img {
+position:absolute;
+right:0px;
+z-index: -1;
+}
+
+.hero-section--container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position:relative;
+}
+
+.hero-section--content {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+}
+
+.hero-section--info {
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: auto auto auto 8em;
+    max-height: 50vh;
+}
+
+
+.review-section{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 8em 6em 0 6em;
+}
+
+.review-card-background{
+    background-color:var(--color-dark-blue);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -2;
+}
+
+.review-content {
+    color: var(--color-cream-white);
+    max-width: 40%;
+    margin-left: 10em;
+}
+
+footer {
+    background-color: var(--color-cream);
+    margin-top: 10em;
+}
+
+.footer-container {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social{
+    display: flex;
+}
+
+.social-link{
+    padding: 0 2em;
+}
+
+
+@media only screen and (max-width: 1780px) {
+.container{
+    padding: 2em;
+}
+
+.hero-img {
+position:relative;
+right:0px;
+z-index: -1;
+}
+
+.cta{
+    align-self: center;
+    margin-bottom: 8em;
+}
+
+.hero-section {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+}
+.hero-section--info{
+display: flex;
+margin-left: 0;
+}
+
+.review-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 8em 6em 0 6em;
+}
+
+.review-card-background{
+    background-color:var(--color-dark-blue);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -2;
+}
+
+.review-content {
+    color: var(--color-cream-white);
+    text-align: center;
+    max-width: 100%;
+    margin-left: 0em;
+}
+.reviewer-info {
+    max-width: 100%;
+}
+.reviewer-img {
+    margin-bottom: 4em;
+}
+
+blockquote{
+    margin: 3em 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+}
+
+@media only screen and (max-width: 980px) {
+.header-mobile-size{
+    font-size: 4.8rem;
+    letter-spacing: -0.05rem;
+    line-height: 5.6rem;
+}
+
+.hero-img {
+ position:static;
+ right:0px;
+ 
+}
+
+.hero-section--container {
+    
+    flex-direction: column;
+    position: static;
+}
+.hero-section--info{
+    margin-top: 4em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4em;
+}
+
+footer {
+    
+}
+
+.footer-container {
+flex-direction: column;
+}
+
+
+
+}
